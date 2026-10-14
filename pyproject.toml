@@ -23,5 +23,12 @@ classifiers = [
 [project.optional-dependencies]
 test = ["pytest"]
 
+[project.urls]
+Homepage = "https://github.com/kostyk348/homeo"
+Source = "https://github.com/kostyk348/homeo"
+
 [tool.setuptools]
 packages = ["homeo"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
