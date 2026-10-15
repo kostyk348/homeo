@@ -1,5 +1,10 @@
 # homeo — гомеостатический контроллер на инвариантах
 
+[![tests](https://github.com/kostyk348/homeo/actions/workflows/tests.yml/badge.svg)](https://github.com/kostyk348/homeo/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
+[![dependencies](https://img.shields.io/badge/runtime_deps-none-brightgreen.svg)](homeo/engine.py)
+
 Компактное ядро (137 строк, без зависимостей) для балансировки **конкурирующих
 инвариантов** в пространстве политики. Порт с C++ (CIDHC, `include/homeo/`).
 
