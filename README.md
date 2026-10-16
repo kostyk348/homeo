@@ -4,6 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![dependencies](https://img.shields.io/badge/runtime_deps-none-brightgreen.svg)](homeo/engine.py)
+[![Release](https://img.shields.io/github/v/release/kostyk348/homeo?sort=semver&color=blue)](https://github.com/kostyk348/homeo/releases)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kostyk348/homeo/blob/main/LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/kostyk348/homeo?branch=main)](https://github.com/kostyk348/homeo/commits/main)
 
 Компактное ядро (137 строк, без зависимостей) для балансировки **конкурирующих
 инвариантов** в пространстве политики. Порт с C++ (CIDHC, `include/homeo/`).
