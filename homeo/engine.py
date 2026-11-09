@@ -37,7 +37,12 @@ class HomeoEngine:
 
     def __init__(self, center, range_, invariants,
                  lr=0.1, max_iter=100, grad_tol=1e-5,
-                 t0=0.02, anneal_k=1.0, seed=42, grad_eps=1e-4):
+                 t0=0.02, anneal_k=1.0, seed=42, grad_eps=1e-4,
+                 h_doublings=12, project=True):
+        """h_doublings: максимум удвоений адаптивного шага h численного градиента
+        (0 — отключить адаптацию, h = grad_eps всегда). project: проекция (обрезка)
+        точки в ящик [−1,1]^n после каждого шага Adam; False — только для абляций,
+        точка может выйти за ящик (actuator всё равно ограничен снаружи)."""
         self.center = list(map(float, center))
         self.range = list(map(float, range_))
         self.n = len(center)
@@ -48,6 +53,8 @@ class HomeoEngine:
         self.t0 = t0
         self.anneal_k = anneal_k
         self.grad_eps = grad_eps
+        self.h_doublings = int(h_doublings)
+        self.project = bool(project)
         self.rng = random.Random(seed)
         # Adam-моменты
         self.m = [0.0] * self.n
@@ -95,7 +102,7 @@ class HomeoEngine:
         # адаптивный h: удваиваем, пока градиент не станет ненулевым
         h = self.grad_eps
         g = self._grad(X, h)
-        for _ in range(12):
+        for _ in range(self.h_doublings):
             if any(abs(gi) > 0.0 for gi in g):
                 break
             h *= 2.0
@@ -115,7 +122,10 @@ class HomeoEngine:
             for _ in range(12):
                 noise += self.rng.random()
             noise = (noise - 6.0) * T
-            X[i] = max(-1.0, min(1.0, X[i] - step + noise))
+            if self.project:
+                X[i] = max(-1.0, min(1.0, X[i] - step + noise))
+            else:
+                X[i] = X[i] - step + noise
 
         return g
 
