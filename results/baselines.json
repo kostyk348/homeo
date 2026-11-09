@@ -1,0 +1,112 @@
+{
+  "scenario": {
+    "label": "линейный стенд",
+    "dt": 0.25,
+    "steps": 480,
+    "T": 120.0,
+    "h1_band": [
+      0.2,
+      1.8
+    ],
+    "h2_band": [
+      0.3,
+      1.4
+    ],
+    "ref": 1.0,
+    "sigma_sensor": 0.005,
+    "umax": 1.5,
+    "plant_params": {
+      "A1": 1.0,
+      "A2": 1.0,
+      "c12": 0.7,
+      "c2": 0.35,
+      "nonlinear": false,
+      "h_start": [
+        0.5,
+        0.5
+      ],
+      "disturbance": "ступень 0.35 м³/с на [40, 80) с"
+    },
+    "controller_model_params": null
+  },
+  "protocol": {
+    "tuning_seed": 123,
+    "eval_seeds": [
+      7,
+      8,
+      9
+    ],
+    "note": "ПИД настроен сеткой на отдельном seed; оценка — среднее по 3 seed'ам (одни и те же потоки возмущений/шума для всех контроллеров)"
+  },
+  "homeo": {
+    "params": {
+      "horizon": 16,
+      "lr": 0.15,
+      "t0": 0.02,
+      "anneal_k": 1.0,
+      "seed": 11,
+      "grad_tol": 0.0001,
+      "max_iter": 80,
+      "w_goal": 1.0,
+      "w_safe": 25.0,
+      "w_eff": 0.05,
+      "safety_margin": 0.03,
+      "d_hat_beta": 0.2
+    },
+    "metrics": {
+      "violation_count": 0.0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.13027,
+      "settling_time": 7.5,
+      "recovery_time": 0.0,
+      "control_effort": 54.825,
+      "filter_triggers": 0.0
+    }
+  },
+  "pid": {
+    "gains": {
+      "Kp": 12.0,
+      "Ki": 0.05,
+      "Kd": 0.5,
+      "anti_windup": "условное интегрирование (clamping)"
+    },
+    "metrics": {
+      "violation_count": 121.0,
+      "max_violation_depth": 0.582806,
+      "overshoot": 0.181292,
+      "settling_time": [
+        39.75,
+        39.5,
+        null
+      ],
+      "recovery_time": 45.5,
+      "control_effort": 57.930333,
+      "filter_triggers": 0.0
+    }
+  },
+  "lqr": {
+    "design": {
+      "method": "DARE (scipy.linalg.solve_discrete_are), интегратор ошибки",
+      "Q_diag": [
+        2.0,
+        8.0,
+        0.4
+      ],
+      "R": 0.05,
+      "K": [
+        3.3791,
+        2.2822,
+        -1.33
+      ]
+    },
+    "metrics": {
+      "violation_count": 152.667,
+      "max_violation_depth": 0.211261,
+      "overshoot": 0.236403,
+      "settling_time": 6.333333,
+      "recovery_time": 42.0,
+      "control_effort": 57.329667,
+      "filter_triggers": 0.0
+    }
+  }
+}

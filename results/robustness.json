@@ -1,0 +1,324 @@
+{
+  "disturbance_sweep": {
+    "homeo": {
+      "amplitudes": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "violation_count": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        83,
+        161,
+        163,
+        158
+      ],
+      "zero_violation_margin": 0.7,
+      "note": "запас = максимальная ПРОВЕРЕННАЯ амплитуда с 0 нарушений (сетка шаг 0.1; для homeo_no_safety_filter d_bound = d)"
+    },
+    "homeo_no_safety": {
+      "amplitudes": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "violation_count": [
+        0,
+        0,
+        154,
+        159,
+        163,
+        165,
+        166,
+        169,
+        170,
+        171,
+        172,
+        172
+      ],
+      "zero_violation_margin": 0.2,
+      "note": "запас = максимальная ПРОВЕРЕННАЯ амплитуда с 0 нарушений (сетка шаг 0.1; для homeo_no_safety_filter d_bound = d)"
+    },
+    "homeo_no_safety_filter": {
+      "amplitudes": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "violation_count": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        310,
+        471,
+        471,
+        471
+      ],
+      "zero_violation_margin": 0.8,
+      "note": "запас = максимальная ПРОВЕРЕННАЯ амплитуда с 0 нарушений (сетка шаг 0.1; для homeo_no_safety_filter d_bound = d)"
+    },
+    "pid": {
+      "amplitudes": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "violation_count": [
+        56,
+        88,
+        108,
+        131,
+        165,
+        168,
+        168,
+        168,
+        173,
+        172,
+        174,
+        169
+      ],
+      "zero_violation_margin": 0,
+      "note": "запас = максимальная ПРОВЕРЕННАЯ амплитуда с 0 нарушений (сетка шаг 0.1; для homeo_no_safety_filter d_bound = d)"
+    },
+    "lqr": {
+      "amplitudes": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "violation_count": [
+        0,
+        0,
+        145,
+        158,
+        166,
+        171,
+        174,
+        179,
+        181,
+        184,
+        184,
+        185
+      ],
+      "zero_violation_margin": 0.2,
+      "note": "запас = максимальная ПРОВЕРЕННАЯ амплитуда с 0 нарушений (сетка шаг 0.1; для homeo_no_safety_filter d_bound = d)"
+    }
+  },
+  "sensor_noise_sweep": {
+    "homeo": [
+      {
+        "sigma": 0.0,
+        "violation_count": 0,
+        "max_violation_depth": 0.0,
+        "overshoot": 0.130486,
+        "settling_time": 7.5,
+        "recovery_time": 0.0,
+        "control_effort": 54.812,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.01,
+        "violation_count": 0,
+        "max_violation_depth": 0.0,
+        "overshoot": 0.131715,
+        "settling_time": 7.25,
+        "recovery_time": 0.0,
+        "control_effort": 54.79,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.02,
+        "violation_count": 0,
+        "max_violation_depth": 0.0,
+        "overshoot": 0.130208,
+        "settling_time": 7.25,
+        "recovery_time": 0.0,
+        "control_effort": 54.728,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.05,
+        "violation_count": 0,
+        "max_violation_depth": 0.0,
+        "overshoot": 0.128864,
+        "settling_time": 36.5,
+        "recovery_time": 0.0,
+        "control_effort": 54.603,
+        "filter_triggers": 0
+      }
+    ],
+    "pid": [
+      {
+        "sigma": 0.0,
+        "violation_count": 119,
+        "max_violation_depth": 0.596384,
+        "overshoot": 0.165249,
+        "settling_time": 39.75,
+        "recovery_time": 40.75,
+        "control_effort": 57.746,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.01,
+        "violation_count": 135,
+        "max_violation_depth": 0.54824,
+        "overshoot": 0.270163,
+        "settling_time": 39.75,
+        "recovery_time": null,
+        "control_effort": 58.349,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.02,
+        "violation_count": 141,
+        "max_violation_depth": 0.605771,
+        "overshoot": 0.17587,
+        "settling_time": 39.75,
+        "recovery_time": 77.25,
+        "control_effort": 58.178,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.05,
+        "violation_count": 153,
+        "max_violation_depth": 0.685137,
+        "overshoot": 0.177986,
+        "settling_time": 39.75,
+        "recovery_time": 72.5,
+        "control_effort": 58.454,
+        "filter_triggers": 0
+      }
+    ],
+    "lqr": [
+      {
+        "sigma": 0.0,
+        "violation_count": 152,
+        "max_violation_depth": 0.199933,
+        "overshoot": 0.237518,
+        "settling_time": 6.5,
+        "recovery_time": 42.0,
+        "control_effort": 57.326,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.01,
+        "violation_count": 152,
+        "max_violation_depth": 0.218584,
+        "overshoot": 0.240341,
+        "settling_time": 6.5,
+        "recovery_time": 42.0,
+        "control_effort": 57.318,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.02,
+        "violation_count": 152,
+        "max_violation_depth": 0.238119,
+        "overshoot": 0.243188,
+        "settling_time": 8.5,
+        "recovery_time": 42.5,
+        "control_effort": 57.311,
+        "filter_triggers": 0
+      },
+      {
+        "sigma": 0.05,
+        "violation_count": 150,
+        "max_violation_depth": 0.303706,
+        "overshoot": 0.251731,
+        "settling_time": 22.75,
+        "recovery_time": 42.5,
+        "control_effort": 57.517,
+        "filter_triggers": 0
+      }
+    ]
+  },
+  "param_drift_c2": {
+    "fraction": 0.3,
+    "results": {
+      "homeo": {
+        "violation_count": 0,
+        "max_violation_depth": 0.0,
+        "overshoot": 0.187469,
+        "settling_time": 7.25,
+        "recovery_time": 0.0,
+        "control_effort": 49.251,
+        "filter_triggers": 0
+      },
+      "pid": {
+        "violation_count": 112,
+        "max_violation_depth": 0.536378,
+        "overshoot": 0.257256,
+        "settling_time": null,
+        "recovery_time": 40.5,
+        "control_effort": 51.481,
+        "filter_triggers": 0
+      },
+      "lqr": {
+        "violation_count": 144,
+        "max_violation_depth": 0.136272,
+        "overshoot": 0.253794,
+        "settling_time": 7.25,
+        "recovery_time": 41.0,
+        "control_effort": 50.972,
+        "filter_triggers": 0
+      }
+    }
+  }
+}

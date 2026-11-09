@@ -1,0 +1,91 @@
+{
+  "scenario_d": 0.5,
+  "variants": {
+    "full": {
+      "overridden": {},
+      "violation_count": 0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.133683,
+      "settling_time": 7.5,
+      "recovery_time": 0.0,
+      "control_effort": 58.891,
+      "filter_triggers": 0
+    },
+    "no_noise": {
+      "overridden": {
+        "t0": 0.0
+      },
+      "violation_count": 0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.134385,
+      "settling_time": 7.5,
+      "recovery_time": 0.0,
+      "control_effort": 58.892,
+      "filter_triggers": 0
+    },
+    "no_anneal": {
+      "overridden": {
+        "anneal_k": 0.0
+      },
+      "violation_count": 0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.078467,
+      "settling_time": 7.0,
+      "recovery_time": 0.0,
+      "control_effort": 58.08,
+      "filter_triggers": 0
+    },
+    "fixed_gain": {
+      "overridden": {
+        "engine_cls": "FixedGainHomeoEngine"
+      },
+      "violation_count": 0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.094102,
+      "settling_time": 7.5,
+      "recovery_time": 0.0,
+      "control_effort": 57.922,
+      "filter_triggers": 0
+    },
+    "no_adaptive_h": {
+      "overridden": {
+        "engine_kwargs": {
+          "h_doublings": 0
+        }
+      },
+      "violation_count": 0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.133683,
+      "settling_time": 7.5,
+      "recovery_time": 0.0,
+      "control_effort": 58.891,
+      "filter_triggers": 0
+    },
+    "no_projection": {
+      "overridden": {
+        "engine_kwargs": {
+          "project": false
+        }
+      },
+      "violation_count": 0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.133683,
+      "settling_time": 7.5,
+      "recovery_time": 0.0,
+      "control_effort": 58.891,
+      "filter_triggers": 0
+    },
+    "no_safety": {
+      "overridden": {
+        "use_safety_invariants": false
+      },
+      "violation_count": 163,
+      "max_violation_depth": 0.423234,
+      "overshoot": 0.339983,
+      "settling_time": 7.25,
+      "recovery_time": 42.25,
+      "control_effort": 62.963,
+      "filter_triggers": 0
+    }
+  }
+}
