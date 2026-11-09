@@ -1,0 +1,93 @@
+{
+  "scenario": {
+    "label": "демо: два связанных резервуара (квадратичные перетоки)",
+    "dt": 0.25,
+    "steps": 720,
+    "T": 180.0,
+    "h1_band": [
+      0.2,
+      1.5
+    ],
+    "h2_band": [
+      0.25,
+      1.2
+    ],
+    "ref": 0.9,
+    "sigma_sensor": 0.02,
+    "umax": 1.2,
+    "plant_params": {
+      "A1": 1.0,
+      "A2": 1.0,
+      "k12": 0.9,
+      "k2": 0.45,
+      "nonlinear": true,
+      "h_start": [
+        0.6,
+        0.6
+      ],
+      "disturbance": "потребитель 0.55 м³/с, меандр период 60 с (скважность 50 %)"
+    },
+    "controller_model_params": {
+      "k12": 0.85,
+      "k2": 0.4,
+      "note": "номинальная модель контроллера смещена относительно объекта"
+    }
+  },
+  "controllers": {
+    "homeo+фильтр": {
+      "violation_count": 0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.106964,
+      "settling_time": 27.75,
+      "recovery_time": 0.0,
+      "control_effort": 115.454,
+      "filter_triggers": 11,
+      "filter_blocked_best_effort": 0,
+      "max_candidate_violation": 0.094653
+    },
+    "homeo": {
+      "violation_count": 0,
+      "max_violation_depth": 0.0,
+      "overshoot": 0.107756,
+      "settling_time": 27.5,
+      "recovery_time": 0.0,
+      "control_effort": 115.419,
+      "filter_triggers": 0,
+      "filter_blocked_best_effort": 0,
+      "max_candidate_violation": 0.0
+    },
+    "homeo без safety": {
+      "violation_count": 360,
+      "max_violation_depth": 0.563603,
+      "overshoot": 0.406466,
+      "settling_time": 27.75,
+      "recovery_time": null,
+      "control_effort": 125.743,
+      "filter_triggers": 0,
+      "filter_blocked_best_effort": 0,
+      "max_candidate_violation": 0.0
+    },
+    "ПИД (со стенда)": {
+      "violation_count": 363,
+      "max_violation_depth": 0.794372,
+      "overshoot": 0.340494,
+      "settling_time": null,
+      "recovery_time": null,
+      "control_effort": 127.143,
+      "filter_triggers": 0,
+      "filter_blocked_best_effort": 0,
+      "max_candidate_violation": 0.0
+    },
+    "LQR (со стенда)": {
+      "violation_count": 366,
+      "max_violation_depth": 0.629705,
+      "overshoot": 0.489534,
+      "settling_time": 10.0,
+      "recovery_time": null,
+      "control_effort": 127.032,
+      "filter_triggers": 0,
+      "filter_blocked_best_effort": 0,
+      "max_candidate_violation": 0.0
+    }
+  }
+}

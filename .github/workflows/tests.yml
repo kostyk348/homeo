@@ -7,11 +7,12 @@ on:
 
 jobs:
   tests:
-    runs-on: ubuntu-latest
+    # ubuntu-24.04: на ubuntu-latest (26.04) setup-python больше не даёт 3.9
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.9", "3.11", "3.13"]
+        python-version: ["3.9", "3.11", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v4
 
@@ -24,7 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install ".[test]"
 
-      - name: Тесты (сходимость, реальная система, ядро)
+      - name: Тесты (ядро, сходимость, реальная система, валидационный слой)
         run: python -m pytest tests/ -v
 
       - name: Примеры (в том числе на реальной системе)
