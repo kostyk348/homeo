@@ -1,4 +1,10 @@
-[English](README.en.md) | Русский
+<div align="center">
+
+<img src="docs/banner.svg" alt="homeo banner" width="1000">
+
+# homeo — гомеостатический контроллер на инвариантах
+
+### Гомеостатический контроллер на инвариантах: Adam-релаксация + термальный шум (порт с C++ CIDHC)
 
 [![tests](https://github.com/kostyk348/homeo/actions/workflows/tests.yml/badge.svg)](https://github.com/kostyk348/homeo/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -7,7 +13,10 @@
 [![Release](https://img.shields.io/github/v/release/kostyk348/homeo?sort=semver&color=blue)](https://github.com/kostyk348/homeo/releases)
 [![Last commit](https://img.shields.io/github/last-commit/kostyk348/homeo?branch=main)](https://github.com/kostyk348/homeo/commits/main)
 
-# homeo — гомеостатический контроллер на инвариантах
+</div>
+
+---
+
 
 > **Статус: research‑прототип, а не production‑контроллер.** Репозиторий —
 > компактное исследовательское ядро (балансировка конкурирующих инвариантов)
